@@ -2,25 +2,29 @@
     
 
     <div>
-        <h3>Adding Diary</h3>
+        <h3>Add Record</h3>
         <form novalidate>
             <div
              class="form-group create">
             <label for="date">Jogging Date</label>
-            <input type="date" class="form-control" id="date" placeholder="mm/dd/yyyy">
+            <input type="date" name="date" class="form-control" id="date" placeholder="mm/dd/yyyy" [(ngModel)] = "date">
 
             <label for="dist">Distance (m)</label>
-            <input type="number" class="form-control" id="dist" placeholder="0">
+            <input type="number" name="dist" class="form-control" id="dist" placeholder="0" [(ngModel)] = "dist">
 
             <label for="time">Time (s)</label>
-            <input type="number" class="form-control" id="time" placeholder="0">
+            <input type="number" name = "time" class="form-control" id="time" placeholder="0"  [(ngModel)] = "time">
             
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
         <br> <br>
-        
+        <span>Your input date is {{date}}</span>
+        <br>
+        <span>Your input distance is {{dist}} meters!</span> 
+        <br>
+        <span>Your input time is {{time}} seconds!</span> 
     </div>
 
 </body>

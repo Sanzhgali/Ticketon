@@ -7,16 +7,13 @@ import {SharedService} from "../shared/shared.service"
 })
 export class AddRecordComponent implements OnInit {
 
-  constructor(private shared : SharedService) { }
-
-  message = "Hey I am recorder!"
+  constructor() { }
 
   ngOnInit(): void {
-    this.shared.setMessage(this.message)
-    
-  } 
-
-  
-
+  }
  
-}
+  date = "12/21/2020"
+  dist = 0
+  time = 0
+
+};
