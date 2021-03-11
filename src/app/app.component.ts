@@ -6,10 +6,13 @@ import {HeaderCompComponent} from './header-comp/header-comp.component';
 import {CarouselComponent} from './carousel/carousel.component';
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
+
+
 })
 export class AppComponent {
   title = 'jogging-diary';

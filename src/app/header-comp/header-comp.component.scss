@@ -1,9 +1,5 @@
 body{
-    margin-top: 40%;
-}
-
-.form-group{
-    padding-left: 15px;
+    max-width: 100%;
 }
 
 .logo{
@@ -17,18 +13,15 @@ a{
 .small-nav{
     text-align: left;
     font-size: 10px;
-    
 }
 
 p{
     padding-left:30px;
 }
-.rounded{
-    max-width: 750px;
-    padding:20px;
-}
+
 
 .lang{
-    padding: 20px;
+    padding-left: 20px;
     size: 5px;
 }
+

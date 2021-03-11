@@ -12,6 +12,9 @@ import {CarouselComponent} from './carousel/carousel.component';
 import { EventsComponent } from './events/events.component';
 import { AdditionalComponent } from './additional/additional.component';
 import { FooterComponent } from './footer/footer.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { MainComponent } from './main/main.component';
+
 
 
 @NgModule({
@@ -24,15 +27,18 @@ import { FooterComponent } from './footer/footer.component';
     CarouselComponent,
     EventsComponent,
     AdditionalComponent,
-    FooterComponent
+    FooterComponent,
+    RegistrationComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
   ],
+  exports: [],
   providers: [],
-  bootstrap: [AppComponent, AddRecordComponent, ResultComponent, HeaderCompComponent, CarouselComponent, EventsComponent, AdditionalComponent]
+  bootstrap: [AppComponent, AddRecordComponent, ResultComponent, HeaderCompComponent, CarouselComponent, EventsComponent, AdditionalComponent, RegistrationComponent, MainComponent]
 })
 export class AppModule { }
