@@ -4,7 +4,7 @@ import { AddRecordComponent } from './add-record/add-record.component';
 import { ResultComponent } from './result/result.component';
 import {HeaderCompComponent} from './header-comp/header-comp.component';
 import {CarouselComponent} from './carousel/carousel.component';
-
+import event from 'server/events.json';
 
 
 @Component({
@@ -16,6 +16,8 @@ import {CarouselComponent} from './carousel/carousel.component';
 })
 export class AppComponent {
   title = 'jogging-diary';
+
+  Events: any = event;  
 }
 
 
