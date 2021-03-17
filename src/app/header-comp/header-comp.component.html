@@ -46,26 +46,19 @@
               <a href="#">Кабинет</a>
               
               <a [routerLink]= "['../registration']"> Войти </a>
-              <br>
+            
             </div>
 
 
         </div>
 
         <div class="row">
-          
-            <a href = "#">Кино</a> 
-            <a href = "#">Театры</a> 
-            <a href = "#">Концерты</a> 
-            <a href = "#">Детям</a> 
-            <a href = "#">Спорт</a> 
-            <a href = "#">Фитнес</a> 
-            <a href = "#">Туры</a> 
-            <a href = "#">Мастер-Классы</a> 
-            <a href = "#">Развлечения</a> 
-            <a href = "#">Музеи</a> 
-            <a href = "#">Ticketon Day</a>     
-        
+            <a href="#"> Все </a>
+             <a [title] = "'theater' + 'category'" [routerLink] = "['/categories', 'theater']"> Театр </a>
+             <a [title] = "'sport' + 'category'" [routerLink] = "['/categories', 'sport']"> Спорт </a>
+             <a [title] = "'master_class' + 'category'" [routerLink] = "['/categories', 'master_class']"> Мастер Класс </a>
+             <a [title] = "'entertainment' + 'category'" [routerLink] = "['/categories', 'entertainment']"> Развлечения </a>
+
         </div>
         <br>
         <p>Событий найдено: 614</p>

@@ -14,6 +14,8 @@ import { AdditionalComponent } from './additional/additional.component';
 import { FooterComponent } from './footer/footer.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { MainComponent } from './main/main.component';
+import { DetailComponent } from './detail/detail.component';
+import { CategoryComponent } from './category/category.component';
 
 
 
@@ -29,7 +31,9 @@ import { MainComponent } from './main/main.component';
     AdditionalComponent,
     FooterComponent,
     RegistrationComponent,
-    MainComponent
+    MainComponent,
+    DetailComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

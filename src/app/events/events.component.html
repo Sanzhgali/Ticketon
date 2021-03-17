@@ -1,13 +1,15 @@
 <body>
     <div class="row">
         <div class="container">
-
-            <h3 class="title">Популярные</h3>
-
+            
+            <h3 class="title">Популярные </h3>
+            
             <div class="row">
                 <div *ngFor="let event of Events" class="col-md-4 list"> 
                     <img src={{event.image}}>     
-                    <h4>{{event.name}} </h4>
+                    <a [title] = "event.name + 'details'" [routerLink] = "['/detail', event.id]"> 
+                        {{event.name}} 
+                    </a>
                     <p>{{event.date}}, {{event.price}} </p>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Кыз Муны",
         "location": " г. Алматы, театр им. Ауэзова",
         "date": "5 марта, 18:30",
@@ -10,10 +11,11 @@
         "director": "Т. Аралбай, ҚР еңбек сіңірген артисі",
         "last": "2 сағ.",
         "restrictions": "14+",
-        "views": 1465
-
+        "views": 1465,
+        "category" : "theater"
      },
      {
+        "id": 2,
         "name": "Инструкция как правильно плакать",
         "location": "г. Алматы, Пространство Трансформа",
         "date": "20 марта, 19:30",
@@ -24,9 +26,11 @@
         "director": "Дарья Спивакова",
         "last": "",
         "restrictions": "18+",
-        "views": 1754
+        "views": 1754,
+        "category" : "master_class"
      },
      {
+        "id": 3,
         "name": "Евгений Онегин",
         "location": "г. Нур-Султан, Астана опера",
         "date": "27 февраля, 18:00",
@@ -37,9 +41,11 @@
         "director": "Алан Бурибаев",
         "last": "Опера (лирические сцены) в 3-х действиях с Прологом",
         "restrictions": "",
-        "views": 1000
+        "views": 1000,
+        "category" : "theater"
      },
      {
+        "id":4,
         "name": "Бельгийский иммерсивный спектакль о деньгах £¥€$ («Ложь»)",
         "location": " Культурное пространство “Трансформа”, г. Алматы, ул. Байзакова, 280, SmArtPoint, 1 этаж",
         "date": "13 марта, 16:00",
@@ -50,9 +56,11 @@
         "director": " Александр Девриндт",
         "last": "110 мин",
         "restrictions": " 18+",
-        "views": 3405
+        "views": 3405,
+        "category" : "theater"
      },
      {
+        "id":5,
         "name": "Oi-Qaragai Lesnaya Skazka",
         "location": "Lesnaya Skazka",
         "date": "",
@@ -63,9 +71,11 @@
         "director": "",
         "last": "",
         "restrictions": "",
-        "views": 2001
+        "views": 2001,
+        "category" : "entertainment"
      },
      {
+        "id":6,
         "name": "«Вальпургиева ночь»",
         "location": "Astana Ballet",
         "date": "13 марта, 18:00",
@@ -76,9 +86,11 @@
         "director": "Георгий Ковтун",
         "last": "",
         "restrictions": "5+.",
-        "views": 1100
+        "views": 1100,
+        "category" : "theater"
      },
      {
+        "id": 7,
         "name": "Любовница",
         "location": "театр-студия Оркен, Алматы",
         "date": "27 февраля, 5, 6 марта",
@@ -89,9 +101,11 @@
         "director": "Разия Хасанова",
         "last": "",
         "restrictions": "16+",
-        "views": 320
+        "views": 320,
+        "category" : "theater"
      },
      {
+        "id": 8,
         "name": "Мастер и Маргарита",
         "location": "театр им. Ауэзова, Алматы",
         "date": "9 октября, 16:30",
@@ -102,9 +116,11 @@
         "director": " Валерий Белякович",
         "last": "2 часа 40 мин",
         "restrictions": "16+",
-        "views": 1400
+        "views": 1400,
+        "category" : "theater"
      },
      {
+        "id": 9,
         "name": "Вечер одноактных балетов",
         "location": "КГАТОБ им.Абая, Алматы",
         "date": "12-13 марта,  19:00",
@@ -115,9 +131,11 @@
         "director": "Михаил Фокин, Дэвид Джонатан, Рикардо Амаранте",
         "last": "1 час 30 минут",
         "restrictions": "7+",
-        "views": 950
+        "views": 950,
+        "category" : "theater"
      },
      {
+        "id": 10,
         "name": "#Огонь детка",
         "location": "театр-студия Оркен, Алматы",
         "date": "6 марта",
@@ -128,9 +146,11 @@
         "director": "Разия Хасанова",
         "last": "90 минут",
         "restrictions": "16+",
-        "views": 766
+        "views": 766,
+        "category" : "theater"
      },
      {
+        "id": 11,
         "name": "Таңсұлу",
         "location": "театр им. Ауэзова, Алматы",
         "date": "27 февраля, 18:30",
@@ -141,9 +161,11 @@
         "director": "А. Кәкішева, Қазақстанның еңбек сіңірген қайраткері",
         "last": "90 минут",
         "restrictions": "13+",
-        "views": 500
+        "views": 500,
+        "category" : "theater"
      },
      {
+        "id": 12,
         "name": "Туған күн",
         "location": "театр им. Ауэзова, Алматы",
         "date": "27 февраля, 18:30",
@@ -154,6 +176,7 @@
         "director": "Е. Кәрібаев",
         "last": "",
         "restrictions": "18+",
-        "views": 555
+        "views": 555,
+        "category" : "theater"
      }
 ]

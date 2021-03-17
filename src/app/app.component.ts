@@ -18,6 +18,7 @@ export class AppComponent {
   title = 'jogging-diary';
 
   Events: any = event;  
+  
 }
 
 

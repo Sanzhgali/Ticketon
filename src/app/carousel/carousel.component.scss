@@ -1,13 +1,15 @@
 .container {
-    position:static;
-    display:inline-block;
+    position: sticky;
+    display: contents;
     text-align:center;  
+  
+    
 }
 .container-fluid{
     background-color: white;
-    max-width: 100%;
+    max-width: 95%;
     padding-left: none;
-    overflow: hidden;
+    overflow: initial;
 }
 
 
