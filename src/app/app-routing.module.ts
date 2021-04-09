@@ -7,11 +7,12 @@ import { DetailComponent } from './detail/detail.component';
 import { EventDetailGuard } from './detail/event-detail.guard';
 import { HeaderCompComponent } from './header-comp/header-comp.component';
 import { MainComponent } from './main/main.component';
+import { UnsavedInputGuard } from './registration/unsaved-input.guard';
 
 const routes: Routes = [
   { path: 'home', component: MainComponent },
 
-  { path: 'registration', component: RegistrationComponent },
+  { path: 'registration', canDeactivate: [UnsavedInputGuard], component: RegistrationComponent },
 
   { path: '', redirectTo: 'home', pathMatch: 'full'},
 

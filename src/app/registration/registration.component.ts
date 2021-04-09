@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from '@angular/forms'
 
 @Component({
   selector: 'registration',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
+  email: FormControl = new FormControl();
+  password: FormControl = new FormControl();
+  
   constructor() { }
 
   ngOnInit(): void {

@@ -16,7 +16,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { MainComponent } from './main/main.component';
 import { DetailComponent } from './detail/detail.component';
 import { CategoryComponent } from './category/category.component';
-
+import {ReactiveFormsModule} from '@angular/forms'
 
 
 @NgModule({
@@ -40,6 +40,7 @@ import { CategoryComponent } from './category/category.component';
     AppRoutingModule,
     FormsModule,
     NgbModule,
+    ReactiveFormsModule
   ],
   exports: [],
   providers: [],
