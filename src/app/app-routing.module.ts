@@ -16,7 +16,7 @@ const routes: Routes = [
 
   { path: '', redirectTo: 'home', pathMatch: 'full'},
 
-  { path: 'detail/:id',  canActivate: [EventDetailGuard], component: DetailComponent },
+  { path: 'detail/:id',  canActivate: [EventDetailGuard], component: DetailComponent},
 
   { path: 'categories/:category', component: CategoryComponent}
 ]

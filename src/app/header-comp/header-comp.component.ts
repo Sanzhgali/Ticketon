@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {CategoryService} from '../category.service'
 import event from 'server/events.json';
+import {SearchPipe} from '../pipes/search'
 
 @Component({
   selector: 'app-header-comp',
@@ -9,28 +9,14 @@ import event from 'server/events.json';
 })
 export class HeaderCompComponent implements OnInit {
   
-
-  Events: any = event; 
   
+
+  
+  searchText = '';
+
   typ: string = 'Defskiy';
 
-  constructor(public category:CategoryService) { }
-  
-  categoryName(name: any){
-    
-    this.typ = name;
-    console.log(this.typ);
-    this.category.data$.next(this.typ);
-
-  }
-
-
-
-
-  sendCategory(example: any){
-    this.category.data$.next(example);
-    console.log(example);
-  }
+  constructor() { }
 
   ngOnInit(): void {
     

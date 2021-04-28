@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import event from 'server/events.json';
-import {CategoryService} from '../category.service'
 import { pipe } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
@@ -11,18 +10,27 @@ import { switchMap } from 'rxjs/operators';
 })
 export class EventsComponent implements OnInit {
   Events: any = event; 
-  constructor(public category: CategoryService) { }
-  
-  public typ: string = '';
 
-  ngOnInit(): void {
-    
-    this.category.sendData.pipe(switchMap(() => this.category.setValue))
-    .subscribe(data => {
-      this.typ = data
-      console.log(this.typ);
-    });
-}
+  name: string | undefined;
+
+  Search(){
+
+    if (this.name != ""){
+      this.Events = this.Events.filter((res: { name: { toLocaleLowerCase: () => { (): any; new(): any; match: { (arg0: string | undefined): any; new(): any; }; }; }; })=>{
+        return res.name.toLocaleLowerCase().match(this.name?.toLocaleLowerCase());
+      });
+    }
+    else{
+      return this.ngOnInit();
+    }
+  }
+
+  constructor() { }
+
+
+  ngOnInit(): void {}
+
+
 
   }
 

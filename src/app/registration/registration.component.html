@@ -3,23 +3,117 @@
 
   <div class="wrapper fadeInDown">
       <div id="formContent">
-        <!-- Tabs Titles -->
-    
-        <!-- Icon -->
+     
         <div class="fadeIn first">
             <h3>Вход</h3>
         </div>
     
         <!-- Login Form -->
         <form>
-          <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email или телефон" [formControl] = "email">
-          <input type="text" id="password" class="fadeIn third" name="login" placeholder="пароль" [formControl] = "password">
-          <input type="submit" class="fadeIn fourth" value="Войти">
+          <!-- Name -->
+          <div class="form-group">
+            <label for="firstName"></label>
+            <input 
+              required
+              minlength="3"
+              maxlength="10"
+              pattern="[a-zA-Z ]*"
+              ngModel 
+              name = "firstName"
+              id="firstName"
+              #firstName="ngModel"
+              
+              type="text" placeholder="Имя" class="fadeIn second">
+              
+              <div class="alert alert-danger" *ngIf = "firstName?.touched && !firstName.valid"> 
+
+                <div *ngIf="firstName?.errors.required"> Обьязательное поле</div>
+                <div *ngIf="firstName.errors.minlength"> Как минимум 3 буквы</div>  
+                <div *ngIf="firstName.errors.maxlength"> Максимум 10 букв</div>  
+                <div *ngIf="firstName.errors.pattern"> Толкько буквы на английском  </div>  
+
+              </div>   
+          </div>
+        <!-- Email -->
+          <div class="form-group">
+            <label for="user_email"> </label>
+            <input 
+              required
+              minlength="10"
+              maxlength="25"
+              email
+              ngModel 
+              name = "user_email"
+              id="user_email"
+              #user_email="ngModel"
+              type="email" placeholder="Почта" class="fadeIn second">
+
+              <div class="alert alert-danger" *ngIf = "user_email?.touched && !user_email.valid"> 
+
+                <div *ngIf="user_email?.errors.required"> Обьязательное поле</div>
+                <div *ngIf="user_email.errors.minlength"> Как минимум 10 символов</div>  
+                <div *ngIf="user_email.errors.maxlength"> Максимум 25 символов</div>  
+                <div *ngIf="user_email.errors.email"> Некорректный адрес почты </div>  
+
+              </div>   
+          </div>
+
+          <div class="form-group">
+            <label for="password"> </label>
+            <input 
+              required
+              minlength="8"
+              maxlength="20"
+              ngModel 
+              name = "password"
+              id="password"
+              #password="ngModel"
+              type="password" placeholder="Пароль" class="fadeIn second">
+
+              <div class="alert alert-danger" *ngIf = "password?.touched && !password.valid"> 
+
+                <div *ngIf="password?.errors.required"> Обьязательное поле</div>
+                <div *ngIf="password.errors.minlength"> Как минимум 8 символов</div>  
+                <div *ngIf="password.errors.maxlength"> Максимум 20 символов</div>  
+                  
+
+              </div>   
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword"> </label>
+            <input 
+              required
+              minlength="8"
+              maxlength="20"
+              pattern= "{{ password.value }}"
+              ngModel 
+              name = "confirmPassword"
+              id="confirmPassword"
+              #confirmPassword="ngModel"
+              type="password" placeholder="Повторите пароль" class="fadeIn second">
+
+              <div class="alert alert-danger" *ngIf = "confirmPassword?.touched && !confirmPassword.valid"> 
+
+                <div *ngIf="confirmPassword?.errors.required"> Обьязательное поле</div>
+                <div *ngIf="confirmPassword.errors.minlength"> Как минимум 8 символов</div>  
+                <div *ngIf="confirmPassword.errors.maxlength"> Максимум 20 символов</div>  
+                <div *ngIf="confirmPassword.errors.pattern"> Пароль не соответсвует </div>
+
+              </div>   
+          </div>
+          <div class="form-group">
+            <label for="birthDate"> </label>
+            <input type="date" ngModel = "birthDate" id="birthDate" class="fadeIn second" placeholder="День рождения" name="login">
+          </div>          
+
+          <button class = "btn btn-primary"> Зарегистрироваться </button>
+        
         </form>
     
         <!-- Remind Passowrd -->
         <div id="formFooter">
-          <a class="underlineHover" href="#">Воостановить пароль</a>
+          <a class="underlineHover" href="#">Уже есть аккаунт? Авторизуйтесь</a>
         </div>
     
       </div>

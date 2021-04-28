@@ -17,7 +17,7 @@ import { MainComponent } from './main/main.component';
 import { DetailComponent } from './detail/detail.component';
 import { CategoryComponent } from './category/category.component';
 import {ReactiveFormsModule} from '@angular/forms'
-
+import {SearchPipe} from '../app/pipes/search'
 
 @NgModule({
   declarations: [
@@ -33,7 +33,8 @@ import {ReactiveFormsModule} from '@angular/forms'
     RegistrationComponent,
     MainComponent,
     DetailComponent,
-    CategoryComponent
+    CategoryComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

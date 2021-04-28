@@ -1,9 +1,11 @@
 <body>
     <div class="row">
         <div class="container">
+            <br>
+            Search: <input type = "text" placeholder="Event name" [(ngModel)] = "name" (input) = "Search()" />
+            <br>
             
             <h3 class="title">Популярные </h3>
-            
             <div class="row">
                 <div *ngFor="let event of Events" class="col-md-4 list"> 
                     <img src={{event.image}}>     

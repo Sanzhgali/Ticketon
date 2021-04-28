@@ -2,12 +2,17 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    "strict": false,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": false,
     "outDir": "../out-tsc/e2e",
     "module": "commonjs",
     "target": "es2018",
     "types": [
       "jasmine",
       "node"
-    ]
-  }
+    ],
+    
+  },
+  
 }

@@ -6,14 +6,13 @@ import {FormControl} from '@angular/forms'
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss']
 })
-export class RegistrationComponent implements OnInit {
+export class RegistrationComponent{
 
   email: FormControl = new FormControl();
   password: FormControl = new FormControl();
+
   
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  log(x: any){ console.log(x); }
+  
+  
 }
