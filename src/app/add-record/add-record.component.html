@@ -1,30 +1,88 @@
 <body>
-    
-
-    <div>
-        <h3>Add Record</h3>
-        <form novalidate>
-            <div
-             class="form-group create">
-            <label for="date">Jogging Date</label>
-            <input type="date" name="date" class="form-control" id="date" placeholder="mm/dd/yyyy" [(ngModel)] = "date">
-
-            <label for="dist">Distance (m)</label>
-            <input type="number" name="dist" class="form-control" id="dist" placeholder="0" [(ngModel)] = "dist">
-
-            <label for="time">Time (s)</label>
-            <input type="number" name = "time" class="form-control" id="time" placeholder="0"  [(ngModel)] = "time">
+    <div class="row">
+    <div class="col-md-4">
+    <form>
+        <!-- Name -->
+        <div class="form-group">
+        <label for="firstName"></label>
+        <input 
+            required
+            minlength="3"
+            maxlength="10"
+            pattern="[a-zA-Z ]*"
+            ngModel 
+            name = "firstName"
+            id="firstName"
+            #firstName="ngModel"
             
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+            type="text" placeholder="Имя" class="fadeIn second">
+            
+            <div class="alert alert-danger" *ngIf = "firstName?.touched && !firstName.valid"> 
 
-        <br> <br>
-        <span>Your input date is {{date}}</span>
-        <br>
-        <span>Your input distance is {{dist}} meters!</span> 
-        <br>
-        <span>Your input time is {{time}} seconds!</span> 
-    </div>
+            <div *ngIf="firstName?.errors.required"> Обьязательное поле</div>
+            <div *ngIf="firstName.errors.minlength"> Как минимум 3 буквы</div>  
+            <div *ngIf="firstName.errors.maxlength"> Максимум 10 букв</div>  
+            <div *ngIf="firstName.errors.pattern"> Толкько буквы на английском  </div>  
 
+            </div>   
+        </div>
+    <!-- Email -->
+        <div class="form-group">
+        <label for="user_email"> </label>
+        <input 
+            required
+            minlength="10"
+            maxlength="25"
+            email
+            ngModel 
+            name = "user_email"
+            id="user_email"
+            #user_email="ngModel"
+            type="email" placeholder="Почта" class="fadeIn second">
+
+            <div class="alert alert-danger" *ngIf = "user_email?.touched && !user_email.valid"> 
+
+            <div *ngIf="user_email?.errors.required"> Обьязательное поле</div>
+            <div *ngIf="user_email.errors.minlength"> Как минимум 10 символов</div>  
+            <div *ngIf="user_email.errors.maxlength"> Максимум 25 символов</div>  
+            <div *ngIf="user_email.errors.email"> Некорректный адрес почты </div>  
+
+            </div>   
+        </div>
+
+        <div class="form-group">
+        <label for="age"> </label>
+        <input type="number" ngModel = "age" id="age" class="fadeIn second" placeholder="Возраст" name="age">
+        </div>     
+        
+        <div class="form-group">
+            <label for="eventId"> </label>
+            <input type="number" ngModel = "eventId" id="eventId" class="fadeIn second" placeholder="событие" min="1" max="15" name="eventId">
+        </div>          
+
+      
+
+        <button class = "btn btn-primary"> Зарегистрироваться </button>
+        {{firstName.value}}
+    </form>
+</div>
+    <table>
+        <tr>
+            <th>Имя</th>
+            <th>Почта</th>
+            <th>Возраст</th>
+            <th>Айди мероприятия</th>
+            <th>Количество</th>
+            <th>Общая сумма</th>
+          </tr>
+          <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+          </tr>
+    </table>
+</div>
 </body>

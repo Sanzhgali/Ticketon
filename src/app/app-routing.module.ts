@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {RegistrationComponent} from '../app/registration/registration.component'
+import { AddRecordComponent } from './add-record/add-record.component';
 import { AppComponent } from './app.component';
 import { CategoryComponent } from './category/category.component';
 import { DetailComponent } from './detail/detail.component';
@@ -13,6 +14,8 @@ const routes: Routes = [
   { path: 'home', component: MainComponent },
 
   { path: 'registration', canDeactivate: [UnsavedInputGuard], component: RegistrationComponent },
+
+  { path: 'add-record', component: AddRecordComponent},
 
   { path: '', redirectTo: 'home', pathMatch: 'full'},
 

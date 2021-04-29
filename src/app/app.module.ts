@@ -19,6 +19,7 @@ import { CategoryComponent } from './category/category.component';
 import {ReactiveFormsModule} from '@angular/forms'
 import {SearchPipe} from '../app/pipes/search'
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,14 +35,15 @@ import {SearchPipe} from '../app/pipes/search'
     MainComponent,
     DetailComponent,
     CategoryComponent,
-    SearchPipe
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   exports: [],
   providers: [],

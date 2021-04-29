@@ -59,22 +59,22 @@
           </div>
 
           <div class="form-group">
-            <label for="password"> </label>
+            <label for="user_password"> </label>
             <input 
               required
               minlength="8"
               maxlength="20"
               ngModel 
-              name = "password"
-              id="password"
-              #password="ngModel"
-              type="password" placeholder="Пароль" class="fadeIn second">
+              name = "user_password"
+              id="user_password"
+              #user_password="ngModel"
+              type="user_password" placeholder="Пароль" class="fadeIn second">
 
-              <div class="alert alert-danger" *ngIf = "password?.touched && !password.valid"> 
+              <div class="alert alert-danger" *ngIf = "user_password?.touched && !user_password.valid"> 
 
-                <div *ngIf="password?.errors.required"> Обьязательное поле</div>
-                <div *ngIf="password.errors.minlength"> Как минимум 8 символов</div>  
-                <div *ngIf="password.errors.maxlength"> Максимум 20 символов</div>  
+                <div *ngIf="user_password?.errors.required"> Обьязательное поле</div>
+                <div *ngIf="user_password.errors.minlength"> Как минимум 8 символов</div>  
+                <div *ngIf="user_password.errors.maxlength"> Максимум 20 символов</div>  
                   
 
               </div>   
@@ -86,8 +86,8 @@
               required
               minlength="8"
               maxlength="20"
-              pattern= "{{ password.value }}"
-              ngModel 
+              pattern= "{{ user_password.value }}"
+              ngModel  
               name = "confirmPassword"
               id="confirmPassword"
               #confirmPassword="ngModel"
@@ -108,7 +108,7 @@
           </div>          
 
           <button class = "btn btn-primary"> Зарегистрироваться </button>
-        
+          {{firstName.value}}
         </form>
     
         <!-- Remind Passowrd -->
