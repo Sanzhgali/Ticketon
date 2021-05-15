@@ -10,7 +10,7 @@
             minlength="3"
             maxlength="10"
             pattern="[a-zA-Z ]*"
-            ngModel 
+            ngModel
             name = "firstName"
             id="firstName"
             #firstName="ngModel"
@@ -52,36 +52,41 @@
 
         <div class="form-group">
         <label for="age"> </label>
-        <input type="number" ngModel = "age" id="age" class="fadeIn second" placeholder="Возраст" name="age">
+        <input type="number" ngModel #age = "ngModel" id="age" class="fadeIn second" placeholder="Возраст" name="age">
         </div>     
         
         <div class="form-group">
             <label for="eventId"> </label>
-            <input type="number" ngModel = "eventId" id="eventId" class="fadeIn second" placeholder="событие" min="1" max="15" name="eventId">
+            <input type="number" ngModel #eventId = "ngModel" id="eventId" class="fadeIn second" placeholder="событие" min="1" max="15" name="eventId">
+        </div>          
+
+        <div class="form-group">
+            <label for="quantity"> </label>
+            <input type="number" ngModel #quantity = "ngModel" id="quantity" class="fadeIn second" placeholder="кол-во" min="1" max="20" name="quantity">
         </div>          
 
       
 
         <button class = "btn btn-primary"> Зарегистрироваться </button>
-        {{firstName.value}}
+       
     </form>
 </div>
     <table>
         <tr>
-            <th>Имя</th>
-            <th>Почта</th>
-            <th>Возраст</th>
-            <th>Айди мероприятия</th>
-            <th>Количество</th>
-            <th>Общая сумма</th>
+            <th>Имя </th>
+            <th>Почта </th>
+            <th>Возраст </th>
+            <th>Айди мероприятия </th>
+            <th>Количество </th>
+            <th>Общая сумма </th>
           </tr>
           <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
+            <td> {{firstName.value}} </td>
+            <td> {{ user_email.value }}</td>
+            <td> {{ age.value}} </td>
+            <td> {{ eventId.value }}</td>
+            <td> {{ quantity.value }}</td>
+            <td>  {{ getOverall( 6, quantity.value) }}</td>
           </tr>
     </table>
 </div>

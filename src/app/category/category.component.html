@@ -3,9 +3,6 @@
         <div class="row">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
-                <app-header-comp>
-                    
-                </app-header-comp>
                 <div *ngIf = "event" class="events">
                     <img src={{event.image}}>     
                     <a [title] = "event.name + 'details'" [routerLink] = "['/detail', event.id]"> 

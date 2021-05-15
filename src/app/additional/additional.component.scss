@@ -1,37 +1,89 @@
-.dropbtn {
-    
-    color: #FF5F1F;
-    padding: 16px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: white;
-    border-color: #FF5F1F;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+*{
+  margin: 0;
+  padding:0;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0.0, 0.0, 0.0, 0.7), rgba(0.0, 0.0, 0.0, 0.7)), url('../../assets/people-concert-wallpaper-1080p-backgrounds-concert-people-background-25952.jpg');
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+ 
+}
+
+button{
+  width:180px;
+  color: #000;
+  font-size: 12px;
+  padding: 12px 0;
+  background:#fff;
+  border:0;
+  border-radius: 20px;
+  outline: none;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.row{
+  display: flex;
+  height: 88%;
+  align-items: center;
+}
+.col{
+  flex-basis: 50%;
+}
+.card{
+  width: 270px;
+  height: 270px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  margin: 10px 6px;
+  transition: transform 0.5s;
+}
+
+.card1{
+  background-image: url('../../assets/5c474c6db8dfa825756998.jpg');
+}
+
+.card2{
+  background-image: url('../../assets/theater.jpg');
+}
+
+.card3{
+  background-image: url('../../assets/3b1508009f557ef3e8423434cf2cc736.jpg');
+}
+
+.card4{
+  background-image: url('../../assets/large.jpg');
+}
+
+.card:hover{
+  transform: translateY(-10px);
+}
+
+h5{
+  text-align: center;
+  text-shadow: 2px 2px #000;
+  color: #fff;
+}
+.card p{
+  text-align: center;
+  font-size: 35px;
+  color:#fff;
+  text-shadow: 2px 2px #000;
+}
+h1{
+  color:#fff;
+  text-shadow: 2px 2px #000;
+  padding-left: 30px;
+}
+p{
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  padding-left: 30px;
+}

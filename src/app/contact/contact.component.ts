@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {SharedService} from "../shared/shared.service";
 @Component({
-  selector: 'result',
-  templateUrl: './result.component.html',
-  styleUrls: ['./result.component.scss']
+  selector: 'contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss']
 })
-export class ResultComponent implements OnInit {
+export class ContactComponent implements OnInit {
 
   message = ''  
 

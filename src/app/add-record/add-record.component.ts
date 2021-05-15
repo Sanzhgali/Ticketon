@@ -1,19 +1,28 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {SharedService} from "../shared/shared.service"
+import { FormGroup, FormControl } from '@angular/forms';
+import events from 'server/events.json';
+
 @Component({
   selector: 'add-record',
   templateUrl: './add-record.component.html',
   styleUrls: ['./add-record.component.scss']
 })
-export class AddRecordComponent implements OnInit {
+export class AddRecordComponent{
 
-  constructor() { }
+  myForm = new FormControl ();
+  event: any = events;
 
-  ngOnInit(): void {
+  getPrice(eventId){
+      this.event = events.find((event: { id: number; }) => event.id === eventId);
+
+      return this.event.price;
+  }
+
+  getOverall(x, y){
+    this.event = events.find((event: { id: number; }) => event.id === x);
+
+    return this.event.price * y;
   }
  
-  date = "12/21/2020"
-  dist = 0
-  time = 0
 
 };

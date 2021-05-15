@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AddRecordComponent } from './add-record/add-record.component';
-import { ResultComponent } from './result/result.component';
+import { ContactComponent } from './contact/contact.component';
 import {HeaderCompComponent} from './header-comp/header-comp.component';
 import {CarouselComponent} from './carousel/carousel.component';
 import event from 'server/events.json';

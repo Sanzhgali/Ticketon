@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddRecordComponent } from './add-record/add-record.component';
-import { ResultComponent } from './result/result.component';
+import { ContactComponent} from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderCompComponent } from './header-comp/header-comp.component';
@@ -24,7 +24,7 @@ import {SearchPipe} from '../app/pipes/search'
   declarations: [
     AppComponent,
     AddRecordComponent,
-    ResultComponent,
+    ContactComponent,
     LayoutComponent,
     HeaderCompComponent,
     CarouselComponent,
@@ -47,6 +47,6 @@ import {SearchPipe} from '../app/pipes/search'
   ],
   exports: [],
   providers: [],
-  bootstrap: [AppComponent, AddRecordComponent, ResultComponent, HeaderCompComponent, CarouselComponent, EventsComponent, AdditionalComponent, RegistrationComponent, MainComponent]
+  bootstrap: [AppComponent, AddRecordComponent, ContactComponent, HeaderCompComponent, CarouselComponent, EventsComponent, AdditionalComponent, RegistrationComponent, MainComponent]
 })
 export class AppModule { }
