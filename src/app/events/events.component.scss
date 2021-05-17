@@ -1,42 +1,149 @@
-.list {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 20%;
-    border-radius: 5px;
-    padding: 10px;
-    margin-right: 0px;
-    margin-top: 5px;
-    break-inside: avoid;
-  }
+body{
+  background: #FDDA0D;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow:hidden;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 220px 220px 80px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+  max-width: 315px;
+  margin-top: 50px;
+  margin-left: 125px;
   
-  .list:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  img {
-    border-radius: 5px 5px 0 0;
-    width: 100%;
-    height: 200px;
-  }
-  .row{
-      padding-left: 10px;
-  }
+  margin-bottom: 10px;
+}
 
-  p{
-      color:#FF5F1F;
-  }
+.card-image {
+  grid-area: image;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
 
-  .title{
-      padding-left: 275px;
-      padding-top: 50px;
-      padding-bottom: 30px;
-      width: 100%;  
-      border-bottom: 1px solid #000; 
-      line-height: 0.1em;
-      
-  }
+}
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+a{
+  color: inherit;
+}
 
- .title span { 
-     background:#fff; 
-     padding:0 10px; 
- }
+.card-text .date{
+  color: rgb(255, 7, 110);
+  font-size: 13px;
+}
+.card-text p{
+  color: grey;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.card-text h4{
+  margin-top: 0px;
+  font-size: 15px;
+}
+
+.card-stats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
+
+}
+
+.card-stats .stat{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+.card-stats .type{
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.card-stats .value{
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.card-stats .border {
+  border-left: 1px solid rgb(172, 26, 87);
+  border-right: 1px solid rgb(172, 26, 87);
+}
+
+.card-stats .value sup {
+  font-size: 12px;
+}
+
+.card:hover{
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.search-box{
+  position: absolute;
+  top: 1650px;
+  left: 50%;
+  width: 270px;
+  transform: translate(-50%, -50%);
+  background: #2f3640;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.search-box:hover > .serach-txt{
+  width: 290px;
+  padding: 0 6px;
+}
+
+.search-box:hover > .search-btn{
+  background: white;
+}
+
+.search-btn{
+  color: #e84118;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+
+.serach-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+
+}

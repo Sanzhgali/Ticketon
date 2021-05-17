@@ -1,13 +1,48 @@
+<html>
 <body>
-    <div class="row">
-        <div class="container">
-            <br>
-            <input type = "text" placeholder="Event name" [(ngModel)] = "name" (input) = "Search()"  class="form-control"/>
-            <br>
+            <!--
+            <div class="search-box">
             
-            <h3 class="title">Популярные </h3>
+                <input type = "text" placeholder="Искать мероприятия..." [(ngModel)] = "name" (input) = "Search()"  class="form-control search-txt"/>
+                <a class="search btn" href="#"></a>
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            --> 
+            <div class="row">
+                 
+            <div *ngFor= "let event of Events" class="col-4 col-sm-4 col-md-4 card">
+                <div class="card-image" style="background: url({{event.image}});"> 
+                </div>
+                <div class="card-text">
+                    <span class="date"> {{event.date}} </span>
+                    <h4> <a [title] = "event.name + 'details'" [routerLink] = "['/detail', event.id]" > {{event.name}} </a> </h4>
+                  
+                    <p> {{event.description}}</p>
+                </div>
+                <div class="card-stats">
+                   <div class="stat">
+                       <div class="value"> {{event.last}} <sup> m </sup> </div>
+                       <div class="type">Прод.</div>
+                   </div> 
+                   <div class="stat border">
+                    <div class="value"> {{ event.views}}</div>
+                    <div class="type">Смотрели</div>
+                </div> 
+                <div class="stat">
+                    <div class="value">{{ event.restrictions }}</div>
+                    <div class="type">Ограничения </div>
+                </div> 
+                </div>
+
+           
+            </div>  
+            
+        </div>
+     
+            <!--
             <div class="row">
                 <div *ngFor="let event of Events" class="col-md-4 list"> 
+
                     <img src={{event.image}}>     
                     <a [title] = "event.name + 'details'" [routerLink] = "['/detail', event.id]"> 
                         {{event.name}} 
@@ -15,15 +50,10 @@
                     <p>{{event.date}}, {{event.price}} </p>
                 </div>
             </div>
-            <br>
-        <br>
-        </div>
-        <div class="row">
-            <p>Желаете приобрести билеты на главные мероприятия Казахстана? Удобная афиша поможет вам сориентироваться в насыщенной культурной жизни страны. На нашем портале вы найдете расписание всех заведений, предлагающих развлечения в Казахстане.
-
-            Афиша Казахстана пестрит громкими именами популярных артистов в различных жанрах. Местные и зарубежные представители всех видов искусства готовы представить зрителям шоу мирового уровня с участием выдающихся актеров, певцов, танцоров и спортсменов.
-            
-            На сайте Ticketon.kz можно не только узнать, какие развлекательные программы ожидаются в ближайшие дни. Вы также без труда закажете билеты в Казахстане онлайн на долгожданную кинопремьеру или сценическое выступление, концерты гастролирующих солистов и коллективов, спортивные состязания. </p>
-        </div>
-    </div>
+            -->
+     
+                  
+   
 </body>
+
+</html>

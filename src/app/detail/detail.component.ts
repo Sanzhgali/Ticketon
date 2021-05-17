@@ -23,6 +23,7 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {
 
+
     const routeParams = this.route.snapshot.paramMap;
     const eventIdFromRoute = Number(routeParams.get('id'));
 

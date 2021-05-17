@@ -6,12 +6,13 @@ import { AppComponent } from './app.component';
 import { CategoryComponent } from './category/category.component';
 import { DetailComponent } from './detail/detail.component';
 import { EventDetailGuard } from './detail/event-detail.guard';
-import { HeaderCompComponent } from './header-comp/header-comp.component';
-import { MainComponent } from './main/main.component';
 import { UnsavedInputGuard } from './registration/unsaved-input.guard';
+import { SignInComponent } from './user/sign-in/sign-in.component';
+import { SignUpComponent } from './user/sign-up/sign-up.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
-  { path: 'home', component: MainComponent },
+ 
 
   { path: 'registration', canDeactivate: [UnsavedInputGuard], component: RegistrationComponent },
 
@@ -21,7 +22,15 @@ const routes: Routes = [
 
   { path: 'detail/:id',  canActivate: [EventDetailGuard], component: DetailComponent},
 
-  { path: 'categories/:category', component: CategoryComponent}
+  { path: 'categories/:category', component: CategoryComponent},
+
+  { path: 'signup', component: UserComponent,
+    children: [{ path: '', component: SignUpComponent }]
+  },
+  { path: 'login', component: UserComponent,
+    children: [{ path: '', component: SignInComponent }]
+  }
+
 ]
 
 @NgModule({
